@@ -1,0 +1,30 @@
+Todo's:
+
+Inhaltlich:
+    - Header
+    - Unternehmens Timeline
+    - Unternehmensvorstellung
+    - Gallerie
+    - Kontaktformular
+    - Maps
+    - Footer
+
+Technisch:
+    - Umzug zum neuen Hoster
+    - Neue E-Mail
+    - grid layout, flexbox
+
+Farb-Thema:
+#BF0F30
+#C2D7F2
+#99C8F2
+#BF472C
+#0D0D0D
+
+oder
+
+#0339A6
+#D90404
+#A60303
+#590202
+#0D0D0D
