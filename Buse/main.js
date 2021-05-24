@@ -25,7 +25,7 @@ const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
 const torus = new THREE.Mesh(geometry, material);
 
-scene.add(torus);
+// scene.add(torus);
 
 // Lights
 
@@ -60,14 +60,14 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('Sky.jpg');
+const spaceTexture = new THREE.TextureLoader().load('/images/Sky.jpg');
 scene.background = spaceTexture;
 
 // Avatar
 
-const jeffTexture = new THREE.TextureLoader().load('Team.jpg');
+const jeffTexture = new THREE.TextureLoader().load('/images/Team.jpg');
 
-const jeff = new THREE.Mesh(new THREE.BoxGeometry(5, 3.5, 5), new THREE.MeshBasicMaterial({ map: jeffTexture }));
+const jeff = new THREE.Mesh(new THREE.BoxGeometry(2.5, 1.75, 2.5), new THREE.MeshBasicMaterial({ map: jeffTexture }));
 
 scene.add(jeff);
 
@@ -89,8 +89,8 @@ scene.add(jeff);
 // moon.position.z = 30;
 // moon.position.setX(-10);
 
-jeff.position.z = -5;
-jeff.position.x = 2;
+jeff.position.z = -7;
+jeff.position.x = 0;
 
 // Scroll Animation
 
@@ -101,7 +101,7 @@ function moveCamera() {
   // moon.rotation.z += 0.05;
 
   jeff.rotation.y += 0.01;
-  jeff.rotation.z += 0.01;
+  // jeff.rotation.z += 0.01;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
@@ -116,9 +116,9 @@ moveCamera();
 function animate() {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.01;
-  torus.rotation.y += 0.005;
-  torus.rotation.z += 0.01;
+  // torus.rotation.x += 0.01;
+  // torus.rotation.y += 0.005;
+  // torus.rotation.z += 0.01;
 
   // moon.rotation.x += 0.005;
 
