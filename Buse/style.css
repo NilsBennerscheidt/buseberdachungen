@@ -34,6 +34,7 @@ canvas {
   overflow: hidden;
   left: 0;
   z-index: 120;
+  width: 100%;
   /* height: 100vh; */
   background-color: rgb(34 34 34 / 92%);
   bottom: 0;
@@ -78,36 +79,60 @@ canvas {
 
 main {
   top: 0;
+  left: 0;
   color: white;
   z-index: 99;
   position: absolute;
   margin: 0px auto;
   width: 100%;
-  padding: 50px 0px;
+  padding: 5px 0px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
 header {
+  background: var(--dark-bg);
   grid-column: 1 / span 4;
-
-}
-
-section {
-  grid-column: 1 / span 4;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 85%;
   
 }
 
+section {
+  position: relative;
+  width: auto;
+  padding: 1rem;
+  margin: 2%;
+  margin-bottom: var(--spacing);
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  grid-column: 1 / span 4;
+  line-height: 1.5;
+}
+
+.marginTopMobile {
+  /* margin-top: 75%; */
+}
+
 blockquote {
+  padding: 1em;
+  grid-column: 2 / span 3;
+  background: var(--dark-bg)
 
 }
 
 blockquote p {
+  margin: 0;
+}
 
+blockquote:last-child {
+  margin-bottom: 3.2rem;
 }
 
 .left {
-
+  margin-bottom: 25%;
+  /* background: green; */
 }
 
 body {
