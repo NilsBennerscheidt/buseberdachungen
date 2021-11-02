@@ -9,42 +9,38 @@
   <title>Buse</title>
 </head>
 
-<body >
+<body>
   <canvas id="bg"></canvas>
+  <div class="navparent">
 
-  <div class="navbar">
+    <div class="navbar">
 
-    <div class="nav-item">
-      <a href="#" class="nav-link">
+      <a href="#home" class="nav-link">
         <img src="/images/home.svg" alt="" class="imgsvg">
-        <p align="center" class="linktext">Home</p>
+        <h3 align="center" class="linktext">Home</h3>
       </a>
 
-    </div>
-    <div class="nav-item">
-      <a href="#news" class="nav-link">
+      <a href="#about" class="nav-link">
         <img src="/images/info.svg" alt="" class="imgsvg">
-        <p align="center" class="linktext">About</p>
+        <h3 align="center" class="linktext">About</h3>
       </a>
 
-    </div>
-    <div class="nav-item">
       <a href="#gallery" class="nav-link">
         <img src="/images/gallery.svg" alt="" class="imgsvg">
-        <p align="center" class="linktext">Galllary</p>
+        <h3 align="center" class="linktext">Galllary</h3>
       </a>
-    </div>
-    <div class="nav-item">
+
       <a href="#contact" class="nav-link">
         <img src="/images/contact.svg" alt="" class="imgsvg">
-        <p align="center" class="linktext">Contact</p>
+        <h3 align="center" class="linktext">Contact</h3>
       </a>
+
     </div>
   </div>
 
   <main>
 
-    <header>
+    <header id="home">
       <h1>Buse Bedachungen</h1>
       <p>Wilkommen auf unserer Homepage</p>
     </header>
@@ -54,7 +50,7 @@
         <p>I like making stuff and putting it on the internet</p>
       </blockquote> -->
 
-    <section id="news" class="marginTopMobile">
+    <section id="about" class="marginTopMobile">
       <h2>📜 Über uns</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -88,14 +84,7 @@
     <section id="gallery" class="light">
       <h2>Gallerie</h2>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-        est
-        laborum.
-      </p>
+      <img src="images/Team.jpg" alt="Das Team von Buse Bedachungen" class="imageWidth">
 
       <h2>Unserer Partner</h2>
 
@@ -115,7 +104,13 @@
     </blockquote>
 
     <section id="contact" class="left">
+
+
       <h2>Kontaktformular</h2>
+      <p>Rufen sie uns einfach an oder senden sie uns eine Nachricht <br> </p>
+
+
+
       <div class="inputForm">
         <div class="inDiv flexindiv">
           <label for="fname">First Name</label>
@@ -135,10 +130,10 @@
 
         <div class="inDiv2 flexindiv">
           <label for="mMessage">Nachricht</label>
-          <textarea  id="nachricht" class="mMessage" name="firstname" ></textarea>
+          <textarea id="nachricht" class="mMessage" name="firstname"></textarea>
         </div>
 
-        <Button id="submitForm" class="fSubmitForm" >
+        <Button id="submitForm" class="fSubmitForm" onclick="getinput()">
           <span>Absenden</span>
         </Button>
       </div>
@@ -151,8 +146,8 @@
 
 
   </main>
-  <script type="module" src="/main.js"></script>
-  <script type="module" src="/3d.js"></script>
+  <script type="module" src="./3d.js"></script>
+  <!-- <script type="module" src="./input.js"></script> -->
 </body>
 
 </html>
