@@ -2,6 +2,17 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+//#region init
+window.onload = function(){
+  init();
+}
+
+function init(){
+  console.log('jajaj')
+  document.getElementById('submitForm').addEventListener('click', testLalala)
+}
+
+//#endregion init
 // Setup
 
 const scene = new THREE.Scene();
@@ -72,7 +83,7 @@ function moveCamera() {
   jeff.rotation.y += 0.01;
 
   camera.position.z = t * -0.005;
-  jeff .position.z = camera.position.z - 6  ;
+  jeff.position.z = camera.position.z - 6;
 
 }
 
@@ -93,7 +104,7 @@ animate();
 
 
 
-function getinput(){
+function testLalala() {
   var keineFalscheEingabe = true;
   const vname = function () {
     let m = document.getElementById('vorname');
@@ -106,7 +117,7 @@ function getinput(){
     }
   }
 
-  const nname = function () {
+  let nname = function () {
     let m = document.getElementById('nachname');
     if (m.value != undefined) {
       return m.value
@@ -118,7 +129,7 @@ function getinput(){
 
   }
 
-  const email = function () {
+  let email = function () {
     let m = document.getElementById('emailadresse');
     if (validateEmail(m.value) && m.value != undefined) {
       return m.value
@@ -129,7 +140,7 @@ function getinput(){
     }
   }
 
-  const nachricht = function () {
+  let nachricht = function () {
     let m = document.getElementById('nachricht');
     if (m.value != undefined) {
       return m.value
@@ -148,7 +159,7 @@ function getinput(){
 }
 
 function validateEmail(email) {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
 
